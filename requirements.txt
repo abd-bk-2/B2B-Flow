@@ -1,0 +1,7 @@
+Django==5.2.8
+psycopg>=3
+tzdata>=2023.10
+
+# Optional / development helpers you may also want:
+# django-debug-toolbar
+# coverage
