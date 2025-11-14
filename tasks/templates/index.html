@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Flow</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#">B2B Flow</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                {% if request.user.is_authenticated %}
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url 'dashboard' %}">{{ request.user.username }}</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url 'login' %}">Login</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="{% url 'signup' %}">Sign up</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                <h1 class="h3">Welcome to B2B Flow</h1>
+                <p class="text-muted">Manage your business to business tasks efficiently.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
