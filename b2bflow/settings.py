@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-@e@*7c(j1cso8!0dca6=s@boyp_iszr91&pn@0^n9pc&g=$$5_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.onrender.com', 'localhost']
+
 
 
 # Application definition
@@ -74,7 +75,7 @@ WSGI_APPLICATION = 'b2bflow.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-if os.environ.get("Render") :
+if os.environ.get("RENDER") :
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.postgresql_psycopg",
