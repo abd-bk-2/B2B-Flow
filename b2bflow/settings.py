@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'b2bflow.wsgi.application'
 if os.environ.get("RENDER") :
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.postgresql_psycopg",
+            "ENGINE": "django.db.backends.postgresql",
             "NAME": os.environ.get("PG_DATABASE"),
             "USER": os.environ.get("PG_USER"),
             "PASSWORD": os.environ.get("PG_PASSWORD"),
